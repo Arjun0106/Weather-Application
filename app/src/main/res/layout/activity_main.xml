@@ -1,0 +1,65 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:text="@string/weather_forecast"/>
+
+    <EditText
+        android:id="@+id/etCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_city_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/etCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_country_code"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#FFFFFF"
+        tools:ignore="HardcodedText" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGet"
+        android:layout_marginBottom="10dp"
+        android:background="#000000"
+        android:textColor="@android:color/white"
+        android:onClick="getWeatherDetails"
+        android:text="@string/get"
+        app:backgroundTint="@null"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:contentDescription="@string/appbar_scrolling_view_behavior" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvResult"
+            android:textColor="@color/black"/>
+
+</LinearLayout>
